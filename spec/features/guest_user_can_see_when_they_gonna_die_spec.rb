@@ -10,7 +10,7 @@ describe "As a guest user" do
       click_on "Determine Most Dangerous Day"
 
       expect(current_path).to eq('/most_dangerous_day')
-      expect(page).to have_content("Most Dangerous Day")
+      expect(page).to have_content("MOST DANGEROUS DAY")
       expect(page).to have_content("January 01, 2018 - January 07, 2018")
       expect(page).to have_content("January 01, 2018 has 3 potentially dangerous near earth objects")
 
