@@ -12,6 +12,16 @@ describe "As a guest user" do
       expect(current_path).to eq('/most_dangerous_day')
       expect(page).to have_content("Most Dangerous Day")
       expect(page).to have_content("January 1, 2018 - January 7, 2018")
+      expect(page).to have_content("January 1, 2018 has 3 potentially dangerous near earth objects")
+
+      expect(page).to have_content("Name: (2014 KT76)")
+      expect(page).to have_content("NEO Reference ID: 3672906")
+
+      expect(page).to have_content("Name: (2001 LD)")
+      expect(page).to have_content("NEO Reference ID: 3078262")
+
+      expect(page).to have_content("Name: (2017 YR1)")
+      expect(page).to have_content("NEO Reference ID: 3794979")
     end
   end
 end
