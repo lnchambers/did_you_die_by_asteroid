@@ -1,4 +1,4 @@
-class AsteroidService
+class AsteroidSearch
 
   def initialize(params)
     @start_date = params[:start_date]

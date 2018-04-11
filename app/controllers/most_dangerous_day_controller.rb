@@ -1,5 +1,5 @@
 class MostDangerousDayController < ApplicationController
   def index
-    @asteroids = AsteroidService.new(params).run
+    @asteroids = MostDangerousAsteroidsByDate.new(params).asteroids
   end
 end
