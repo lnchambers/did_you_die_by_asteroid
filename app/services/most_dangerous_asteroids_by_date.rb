@@ -1,13 +1,18 @@
 class MostDangerousAsteroidsByDate
 
-  def initialize(params)
-    @start_date = params[:start_date]
-    @end_date = params[:end_date]
+  def initialize(start_date, end_date)
+    @start_date = start_date
+    @end_date = end_date
   end
 
   def asteroids
-    binding.pry
-    AsteroidSearch.new(params).run
+    AsteroidSearch.new(start_date, end_date).run.map do |raw_asteroid|
+      Asteroid.new(raw_asteroid)
+    end
   end
+
+  private
+
+    attr_reader :start_date, :end_date
 
 end
