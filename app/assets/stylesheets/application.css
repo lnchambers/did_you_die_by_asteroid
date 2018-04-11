@@ -47,6 +47,11 @@ h3 {
   color: #7CB4A0
 }
 
+.margin-maker {
+  margin-left: 80px;
+  margin-top: 40px;
+}
+
 nav {
   padding: 0;
   background-color: #7CB4A0;
