@@ -1,8 +1,8 @@
 class AsteroidPresenter
 
   def initialize(params)
-    @start_date = params[:start_date]
-    @end_date = params[:end_date]
+    @start_date = Time.parse(params[:start_date]).strftime('%F')
+    @end_date = Time.parse(params[:end_date]).strftime('%F')
   end
 
   def run
