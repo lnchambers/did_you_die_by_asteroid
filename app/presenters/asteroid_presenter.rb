@@ -5,6 +5,11 @@ class AsteroidPresenter
     @end_date = params[:end_date]
   end
 
+  def run
+    all_asteroids
+    return self
+  end
+
   def all_asteroids
     MostDangerousAsteroidsByDate.new(start_date, end_date).asteroids
   end
