@@ -1,7 +1,7 @@
 <h1>Most Dangerous Day</h1>
 <p><%= @asteroids.date_range %></p>
-<h2><%= @asteroids.most_dangerous_day %> has <%= @asteroids.count %> potentially dangerous near earth objects
-<% @asteroids.each do |asteroid| %>
+<h2><%= @asteroids.most_dangerous_day %> has <%= @asteroids.most_dangerous_count %> potentially dangerous near earth objects
+<% @asteroids.all_asteroids.each do |asteroid| %>
   <ul>
     <li>Name: <%= asteroid.name %></li>
     <li>NEO Reference ID: <%= asteroid.id %></li>

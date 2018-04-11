@@ -18,7 +18,7 @@ class AsteroidSearch
     end
 
     def parse(response)
-      JSON.parse(response.body, symbolize_names: true)
+      json = JSON.parse(response.body, symbolize_names: true)
     end
 
     def response
