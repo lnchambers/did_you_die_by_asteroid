@@ -15,7 +15,7 @@ class AsteroidPresenter
   end
 
   def date_range
-    "#{Time.parse(start_date).strftime('%B %d, %Y')} - #{Time.parse(end_date).strftime('%B %d, %Y')}"
+    "#{Time.parse(start_date).strftime('%B %-d, %Y')} - #{Time.parse(end_date).strftime('%B %-d, %Y')}"
   end
 
   def most_dangerous_day
@@ -25,7 +25,7 @@ class AsteroidPresenter
   end
 
   def most_dangerous_day_format
-    "#{Time.parse(most_dangerous_day.first.close_approach_date).strftime('%B %d, %Y')}"
+    "#{Time.parse(most_dangerous_day.first.close_approach_date).strftime('%B %-d, %Y')}"
   end
 
   private
