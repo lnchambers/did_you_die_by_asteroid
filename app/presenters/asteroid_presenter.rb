@@ -19,13 +19,13 @@ class AsteroidPresenter
   end
 
   def most_dangerous_day
-    group_dangerous_asteroids.max_by do |key, value|
-      value.count
+    group_dangerous_asteroids.values.max_by do |asteroids|
+      asteroids.count
     end
   end
 
   def most_dangerous_day_format
-    "#{Time.parse(most_dangerous_day[0]).strftime('%B %d, %Y')}"
+    "#{Time.parse(most_dangerous_day.first.close_approach_date).strftime('%B %d, %Y')}"
   end
 
   private
